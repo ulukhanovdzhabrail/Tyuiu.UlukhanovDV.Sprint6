@@ -48,5 +48,10 @@ namespace Tyuiu.UlukhanovDV.Sprint6.Task1.V5
         {
             MessageBox.Show("Выполнил: Улуханов Д.В. Группа: СМАРТб-25-1");
         }
+
+        private void textBoxCondition_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

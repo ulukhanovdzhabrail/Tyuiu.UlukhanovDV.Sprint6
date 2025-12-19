@@ -39,13 +39,16 @@
             buttonDone = new Button();
             groupBoxOut = new GroupBox();
             groupBoxRes = new GroupBox();
-            textBoxResult = new TextBox();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBoxIn.SuspendLayout();
             groupBoxInStop.SuspendLayout();
             groupBoxInStart.SuspendLayout();
             groupBoxOut.SuspendLayout();
             groupBoxRes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // textBoxCondition
@@ -57,6 +60,7 @@
             textBoxCondition.Size = new Size(185, 81);
             textBoxCondition.TabIndex = 0;
             textBoxCondition.Text = "Написать программу, которая выводит таблицу значений функции (произвести табулирование)";
+            textBoxCondition.TextChanged += textBoxCondition_TextChanged;
             // 
             // groupBox1
             // 
@@ -142,37 +146,46 @@
             groupBoxOut.Controls.Add(groupBoxRes);
             groupBoxOut.Location = new Point(558, 12);
             groupBoxOut.Name = "groupBoxOut";
-            groupBoxOut.Size = new Size(209, 339);
+            groupBoxOut.Size = new Size(452, 339);
             groupBoxOut.TabIndex = 5;
             groupBoxOut.TabStop = false;
             groupBoxOut.Text = "Вывод данных";
             // 
             // groupBoxRes
             // 
-            groupBoxRes.Controls.Add(textBoxResult);
+            groupBoxRes.Controls.Add(dataGridView1);
             groupBoxRes.Location = new Point(6, 22);
             groupBoxRes.Name = "groupBoxRes";
-            groupBoxRes.Size = new Size(197, 302);
+            groupBoxRes.Size = new Size(440, 302);
             groupBoxRes.TabIndex = 0;
             groupBoxRes.TabStop = false;
             groupBoxRes.Text = "Результат";
             // 
-            // textBoxResult
+            // dataGridView1
             // 
-            textBoxResult.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBoxResult.Location = new Point(11, 22);
-            textBoxResult.Multiline = true;
-            textBoxResult.Name = "textBoxResult";
-            textBoxResult.ReadOnly = true;
-            textBoxResult.ScrollBars = ScrollBars.Vertical;
-            textBoxResult.Size = new Size(176, 268);
-            textBoxResult.TabIndex = 0;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
+            dataGridView1.Location = new Point(6, 25);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Size = new Size(203, 271);
+            dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "X";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "F(x)";
+            Column2.Name = "Column2";
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(779, 367);
+            ClientSize = new Size(1035, 368);
             Controls.Add(groupBoxOut);
             Controls.Add(buttonDone);
             Controls.Add(buttonHelp);
@@ -189,7 +202,7 @@
             groupBoxInStart.PerformLayout();
             groupBoxOut.ResumeLayout(false);
             groupBoxRes.ResumeLayout(false);
-            groupBoxRes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -206,6 +219,8 @@
         private Button buttonDone;
         private GroupBox groupBoxOut;
         private GroupBox groupBoxRes;
-        private TextBox textBoxResult;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
     }
 }
