@@ -80,5 +80,10 @@ namespace Tyuiu.UlukhanovDV.Sprint6.Task2.V19
         {
             buttonDone.BackColor = System.Drawing.Color.Blue;
         }
+
+        private void formsPlotFunction_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

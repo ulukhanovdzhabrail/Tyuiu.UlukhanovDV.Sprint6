@@ -194,6 +194,7 @@
             formsPlotFunction.Name = "formsPlotFunction";
             formsPlotFunction.Size = new Size(307, 286);
             formsPlotFunction.TabIndex = 0;
+            formsPlotFunction.Load += formsPlotFunction_Load;
             // 
             // FormMain
             // 
